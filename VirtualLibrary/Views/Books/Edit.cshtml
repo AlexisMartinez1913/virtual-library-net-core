@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model VirtualLibrary.Models.Entities.Book
+
+@if (Model is null) 
+{
+    <p>No book was found with this Id</p>
+
+}
+else 
+{
+    <form method="post">
+        <h1>Edit Book</h1>
+
+        <div class="mt-2">
+            <label class="form-label">Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly />
+        </div>
+
+        <div class="mt-2">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" asp-for="Title" />
+        </div>
+
+        <div class="mt-2">
+            <label class="form-label">Author</label>
+            <input type="text" class="form-control" asp-for="Author" />
+        </div>
+
+        <div class="mt-2">
+            <label class="form-label">Published Year</label>
+            <input type="text" class="form-control" asp-for="PublishedYear" />
+        </div>
+
+        <div class="mt-2">
+            <label class="form-label">Genre</label>
+            <input type="text" class="form-control" asp-for="Genre" />
+        </div>
+
+        <div class="mt-2">
+            <label class="form-label">Available Copies</label>
+            <input type="text" class="form-control" asp-for="AvailableCopies" />
+        </div>
+
+        <div class="mt-2">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a class="btn btn-dark" asp-controller="Books" asp-action="List">Back to List</a>
+        </div>
+
+        
+
+    </form>
+
+
+}
+
+
